@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Preflight */
+    </style>
+
+    <style>
+      :root {
+        --color-base-100: oklch(92.951% 0.002 17.197);
+        --color-base-200: oklch(86.445% 0.002 17.197);
+        --color-base-300: oklch(79.938% 0.001 17.197);
+        --color-base-content: oklch(16.961% 0.001 17.32);
+        --color-primary: oklch(62.45% 0.278 3.836);
+        --color-secondary: oklch(48.495% 0.11 355.095);
+        --color-neutral: oklch(24.155% 0.049 89.07);
+        --color-info: oklch(72.06% 0.191 231.6);
+        --color-success: oklch(64.8% 0.15 160);
+
+        --size-padding: 16px;
+        --size-space: 32px;
+        --size-radius: 16px;
+        --size-sidebar-width: 256px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--color-base-200);
+        color: var(--color-base-content);
+        padding: var(--size-space);
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--color-secondary);
+        border-radius: 4px;
+        transition: background 0.3s ease;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-primary);
+      }
+
+      body {
+        display: flex;
+        height: 100vh;
+        gap: var(--size-space);
+        padding-right: 4px;
+      }
+
+      aside {
+        width: var(--size-sidebar-width);
+        flex-shrink: 0;
+        padding: var(--size-padding);
+        padding-right: 4px;
+        overflow: hidden;
+        background-color: var(--color-base-100);
+        border-radius: var(--size-radius);
+      }
+
+      aside .sidebar {
+        height: 100%;
+        overflow-y: auto;
+      }
+
+      main {
+        flex: 1;
+        overflow-y: auto;
+      }
+
+      main .content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-space);
+        padding-right: 4px;
+      }
+
+      .truncate {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .box {
+        background-color: var(--color-base-100);
+        border-radius: var(--size-radius);
+        padding: var(--size-padding);
+        overflow: hidden;
+      }
+
+      .card.box {
+        padding: 0;
+      }
+
+      .join {
+        display: flex;
+        gap: var(--size-space);
+      }
+
+      .join div {
+        width: 100%;
+      }
+
+      .card-header {
+        background-color: var(--color-base-300);
+      }
+    </style>
+  </head>
+
+  <body>
+    <aside>
+      <div class="sidebar">
+        <div>
+          <img src="/static/images/logo.svg" alt="logo" />
+          <h2 class="truncate">Lorem Ipsum Lorem Ipsum</h2>
+        </div>
+
+        <div>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Link</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 3</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 4</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 5</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 6</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 7</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 8</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 9</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 3</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 4</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 5</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 6</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 7</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 8</a></li>
+            <li class="nav-item"><a class="nav-link" href="/">Link 9</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="content">
+        <div class="box">
+          <h1>Header</h1>
+        </div>
+
+        <div class="join">
+          <div class="box" style="height: 264px; width: 284px">1</div>
+          <div class="box">2</div>
+        </div>
+
+        <div class="join">
+          <div class="card box">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+              class="card-img-top"
+              alt="demo-image"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h5 class="card-header">Featured</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+          <div class="card box">3</div>
+        </div>
+
+        <div class="join">
+          <div class="box">1</div>
+          <div class="box" style="height: 264px">2</div>
+          <div class="box">3</div>
+          <div class="box">4</div>
+        </div>
+
+        <div class="box">footer</div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
